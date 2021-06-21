@@ -1,0 +1,203 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+/* Generales */
+* {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 500;
+}
+
+hr {
+    border: solid 2px yellowgreen;
+    border-radius: 2px;
+}
+
+button {
+    color: white;
+    background-color: yellowgreen;
+    border: none;
+    border-radius: 7px;
+    padding: 0.4rem 0.7rem;
+    transition: background-color 1s;
+    margin: 1rem;
+}
+
+button:hover {
+    background-color: rgb(111, 141, 51);
+}
+
+button.pdrio-secondary-action {
+    background-color: white;
+    color: yellowgreen;
+    border: solid 1px yellowgreen;
+    transition: border 1s, color 1s;
+}
+
+button.pdrio-secondary-action:hover {
+    border: solid 1px rgb(111, 141, 51);
+    color: rgb(111, 141, 51);
+}
+
+/* HOME */
+
+    /* Carousel */
+        /* Carousel text overlay */
+    .inner-carousel-content {
+        background-color: rgba(0, 128, 128, 0.534);
+        width: 100%;
+        height: 100%;
+    }
+
+    .inner-carousel-text {
+        margin: auto;
+        width: 50%;
+    }
+
+    .pdrio-carousel-heading {
+        font-size: 1.5rem;
+    }
+
+    .inner-carousel-title {
+        display: block;
+        font-size: 3.2rem;
+    }
+
+        /* Carousel icons */
+
+    .carousel-control-prev span, .carousel-control-next span {
+        background-color: yellowgreen;
+        font-size: 1.6rem;
+        border-radius: 0.3rem;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+        color: black;
+        opacity: 1;
+        width: unset;
+    }
+
+    .carousel-next-icon {
+        padding: 0.6rem 0.6rem 0.6rem 0.9rem;
+    }
+
+    .carousel-prev-icon {
+        padding: 0.6rem 0.9rem 0.6rem 0.6rem;
+    }
+
+        /* Carousel Img & height */
+
+    .carousel .carousel-item {
+        height: 500px;
+        overflow: hidden;
+      }
+      
+      .carousel-item img {
+          position: absolute;
+          object-fit:cover;
+          top: 0;
+          left: 0;
+          min-height: 500px;
+          
+      }
+
+      /* Cards 1st ROW */
+
+      .card-footer {
+          background-color: yellowgreen;
+          color: white;
+      }
+
+      /* Cards 3rd ROW */
+
+      .pdrio-badge-sale {
+          background-color: yellowgreen;
+      }
+
+/* CONTACTO */
+
+.pdrio-contact-main h2 {
+    font-size: 1.4rem;
+}
+
+.pdrio-contact-info {
+    background-image: url("./imgs/contact-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.pdrio-contact-info i {
+    color: yellowgreen;
+}
+
+/* DETALLES PRODUCTO */
+
+.pdrio-product-details-header {
+    background-image: url("https://images.unsplash.com/photo-1501777814630-33bc4a3c3ee7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1955&q=80");
+    background-repeat: no-repeat;
+}
+
+.pdrio-main-product-details h2 {
+    font-size: 1.5rem;
+}
+
+.pdrio-main-product-details h3 {
+    font-size: 1.2rem;
+}
+
+.pdrio-product-details span {
+    color: yellowgreen;
+    font-size: 1.3rem;
+}
+
+/* Navbar */
+nav {
+    text-transform: uppercase;
+}
+
+.navbar-nav li.nav-item.active a.nav-link {
+    color: yellowgreen;
+}
+
+/* Footer */
+footer {
+    background-color: black;
+}
+
+footer h2, footer ul.social-media {
+    font-size: 1.5rem;
+}
+
+.footer-content {
+    margin-top: 2rem;
+}
+
+.footer-content i {
+    transition: color 0.6s;
+}
+
+.footer-content i.fab:hover,
+.footer-content i.fas:hover {
+    color: yellowgreen;
+}
+
+/* Responsive */
+
+@media (min-width: 768px) {
+
+    .pdrio-carousel-heading {
+        font-size: 2rem;
+    }
+
+    .inner-carousel-title {
+        display: block;
+        font-size: 5rem;
+    }
+}

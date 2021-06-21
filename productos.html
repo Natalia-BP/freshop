@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./imgs/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./imgs/favicon/favicon-16x16.png">
+
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/315133feff.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <!-- My Styles -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <title>Fresh Shop</title>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="./index.html"><img src="./imgs/logo.png" class="img-fluid w-50" /></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Inicio<span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="./productos.html">Productos</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contacto.html">Contáctanos</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pdrio-main-product-details">
+      <div class="d-flex align-items-center p-4 pdrio-product-details-header h-25">
+        <h2 class="font-weight-bold text-white">Detalles de Producto</h2>
+      </div>
+
+      <div class="container-fluid">
+        <div class="d-flex flex-column flex-md-row align-items-md-center my-5">
+          <div class="col-md-4">
+            <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1936&q=80" alt="" class="img-fluid">
+          </div>
+
+          <div class="col-md-8 pdrio-product-details">
+            <h2 class="font-weight-bold mt-3">Aguacate</h2>
+            <p class="small mb-4"><s>$6.20</s> <span class="font-weight-bold">$3.10</span></p>
+            <h3 class="font-weight-bold">Descripción:</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <hr/>
+            <div class="d-flex">
+              <button class="ml-0 pdrio-secondary-action">Agregar al Carrito</button>
+              <button class="ml-0">Comprar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+   <!-- Footer -->
+  <footer class="d-flex flex-column flex-md-row bg-dark text-white p-5">
+
+    <!-- Horario -->
+    <div class="mb-5 col-md-4">
+      <h2>Horario de Atención</h2>
+      <hr />
+      <div class="footer-content">
+        <ul class="list-unstyled">
+          <li>Lunes - Viernes: 8:00AM a 5:00PM</li>
+          <li class="py-3">Sábado: 10:00AM a 8:00PM</li>
+          <li>Domingo: Cerrado</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Newsletter -->
+    <div class="mb-5 col-md-4">
+      <h2>Newsletter</h2>
+      <hr />
+      <div class="footer-content">
+        <form action="https://formspree.io/f/mnqlvzak" method="POST">
+          <div class="input-group input-group-sm mb-3">
+            <input type="email" name="_replyto" class="form-control" aria-label="Email input for newsletter"
+              aria-describedby="inputGroup-sizing-sm" required>
+            <div class="input-group-append">
+              <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-envelope"></i></span>
+            </div>
+          </div>
+
+          <div class="form-row justify-content-center">
+            <button>Enviar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Redes Sociales -->
+    <div class="mb-5 col-md-4">
+      <h2>Redes Sociales</h2>
+      <hr />
+      <div class="footer-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <ul class="social-media list-inline">
+          <li class="list-inline-item"><i class="fab fa-facebook-square"></i></li>
+          <li class="list-inline-item"><i class="fab fa-twitter-square"></i></li>
+          <li class="list-inline-item"><i class="fab fa-linkedin"></i></li>
+          <li class="list-inline-item"><i class="fab fa-google-plus"></i></li>
+          <li class="list-inline-item"><i class="fas fa-rss-square"></i></li>
+          <li class="list-inline-item"><i class="fab fa-pinterest"></i></li>
+          <li class="list-inline-item"><i class="fab fa-whatsapp-square"></i></li>
+        </ul>
+      </div>
+    </div>
+
+  </footer>
+
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
