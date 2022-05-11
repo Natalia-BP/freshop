@@ -20,7 +20,7 @@ hr {
     border-radius: 2px;
 }
 
-button {
+button, input[type="submit"] {
     color: white;
     background-color: yellowgreen;
     border: none;
@@ -30,7 +30,7 @@ button {
     margin: 1rem;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover {
     background-color: rgb(111, 141, 51);
 }
 
@@ -128,9 +128,13 @@ button.pdrio-secondary-action:hover {
 }
 
 .pdrio-contact-info {
-    background-image: url("./imgs/contact-bg.jpg");
-    background-repeat: no-repeat;
+    background: rgb(132, 69, 69) url("./imgs/contact-bg.jpg") no-repeat center padding-box;
     background-size: 100%;
+    border-radius: 0.5rem;
+}
+
+.pdrio-contact-info p {
+    text-align: justify;
 }
 
 .pdrio-contact-info i {
@@ -191,6 +195,9 @@ footer h2, footer ul.social-media {
 /* Responsive */
 
 @media (min-width: 768px) {
+    .pdrio-contact-info {
+        background-size: unset;
+    }
 
     .pdrio-carousel-heading {
         font-size: 2rem;
@@ -200,4 +207,8 @@ footer h2, footer ul.social-media {
         display: block;
         font-size: 5rem;
     }
+}
+
+@media (min-width: 992px) {
+    
 }
