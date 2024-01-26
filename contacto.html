@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./imgs/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./imgs/favicon/favicon-32x32.png">
@@ -61,15 +64,33 @@
           <hr class="mb-4" />
           <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 
-          <form id="pdrio-contact-main__form" method="POST" action="https://formspree.io/f/mnqlvzak">
+          <form id="pdrio-contact-main__form" method="POST" action="https://formspree.io/f/mnqlvzak" novalidate>
             <div class="form-group">
               <label for="inputName">Nombre</label>
               <input type="text" class="form-control" id="inputName" placeholder="Tu Nombre">
             </div>
+              <div class="name valid-input d-none">
+                Looks good!
+              </div>
+              <div class="name invalid-input --wrong d-none">
+                Please provide a valid name.
+              </div>
+              <div class="name invalid-input --empty d-none">
+                This field is required.
+              </div>
 
             <div class="form-group">
               <label for="inputEmail">Correo Electrónico</label>
               <input type="email" class="form-control" id="inputEmail" placeholder="ex. yourname@youremail.com">
+            </div>
+            <div class="email valid-input d-none">
+              Looks good!
+            </div>
+            <div class="email invalid-input --wrong d-none">
+              Please provide a valid e-mail.
+            </div>
+            <div class="email invalid-input --empty d-none">
+              This field is required.
             </div>
 
             <div class="form-group">
@@ -88,7 +109,7 @@
             </div>
             
             <div class="form-group d-flex justify-content-center justify-content-md-end mb-md-0">
-              <input type="submit" class="m-0"></input>
+              <button type="submit" class="m-0">Enviar</button>
             </div>
           </form>
         </div>
@@ -139,7 +160,7 @@
           </div>
 
           <div class="form-row justify-content-center">
-            <button>Enviar</button>
+            <button type="submit">Enviar</button>
           </div>
         </form>
       </div>
