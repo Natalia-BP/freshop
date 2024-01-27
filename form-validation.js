@@ -14,37 +14,52 @@ contactForm.addEventListener('submit', function (e) {
     const numbersAndSpaces = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
     
     // Name
-    let nameValue = contactName.value;
-    let nameValidation = lettersAndSpaces.test(nameValue);
-    if (!nameValidation) {
+    let nameValue = contactName.val();
+    let nameValidation = email.test(nameValue);
+    let emptyNameInput = $(".name.invalid-input.--empty");
+    let wrongNameInput = $(".name.wrong-input.--empty");
+    // If it's empty
+    if (nameValue.length == 0) {
+        emptyNameInput.removeClass("d-none");
         contactName.addClass("is-invalid");
-    } else {
+    // If it's wrong
+    }  else if (!emailValidation) {
+        wrongNameInput.removeClass("d-none");
+        contactName.addClass("is-invalid");
+    } 
+    // If it's OK
+    else {
+        emptyNameInput.addClass("d-none");
+        wrongNameInput.addClass("d-none");
         contactName.removeClass("is-invalid");
         contactName.addClass("is-valid");
     }
 
     // Email
-    let emailValue = contactEmail.value;
+    let emailValue = contactEmail.val();
     let emailValidation = email.test(emailValue);
-    let emptyEmailInput = $(".invalid-input.--empty");
-    let wrongEmailInput = $(".wrong-input.--empty");
+    let emptyEmailInput = $(".email.invalid-input.--empty");
+    let wrongEmailInput = $(".email.invalid-input.--wrong");
+    let validEmailInput = $(".email.valid-input");
+
     // If it's empty
     if (emailValue.length == 0) {
         emptyEmailInput.removeClass("d-none");
         contactEmail.addClass("is-invalid");
-        console.log('Aqui estoy');
-        console.log(emptyEmailInput);
+        console.log("donde estoy")
     // If it's wrong
     }  else if (!emailValidation) {
         wrongEmailInput.removeClass("d-none");
+        emptyEmailInput.addClass("d-none");
         contactEmail.addClass("is-invalid");
-        console.log('O Aqui estoy')
+        console.log("aqui?")
     } 
     // If it's OK
     else {
+        contactEmail.removeClass("is-invalid");
+        validEmailInput.removeClass("d-none")
         emptyEmailInput.addClass("d-none");
         wrongEmailInput.addClass("d-none");
-        contactEmail.removeClass("is-invalid");
         contactEmail.addClass("is-valid");
     }
     

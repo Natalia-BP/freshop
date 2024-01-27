@@ -129,7 +129,7 @@ button.pdrio-secondary-action:hover {
 
 .pdrio-contact-info {
     background: rgb(132, 69, 69) url("./imgs/contact-bg.jpg") no-repeat center padding-box;
-    background-size: 100%;
+    background-size: cover;
     border-radius: 0.5rem;
 }
 
@@ -139,6 +139,10 @@ button.pdrio-secondary-action:hover {
 
 .pdrio-contact-info i {
     color: yellowgreen;
+}
+
+.form-group {
+    margin-bottom: 2rem;
 }
 
 /* DETALLES PRODUCTO */
@@ -222,9 +226,7 @@ footer h2, footer ul.social-media {
 /* Responsive media queries */
 
 @media (min-width: 768px) {
-    .pdrio-contact-info {
-        background-size: unset;
-    }
+  
 
     .pdrio-carousel-heading {
         font-size: 2rem;

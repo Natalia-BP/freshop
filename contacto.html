@@ -66,31 +66,33 @@
 
           <form id="pdrio-contact-main__form" method="POST" action="https://formspree.io/f/mnqlvzak" novalidate>
             <div class="form-group">
-              <label for="inputName">Nombre</label>
+              <label for="inputName">Nombre *</label>
               <input type="text" class="form-control" id="inputName" placeholder="Tu Nombre">
+              <!-- Input feedback -->
+                <div class="name valid-input d-none">
+                  Looks good!
+                </div>
+                <div class="name invalid-input --wrong d-none">
+                  * Please provide a valid name.
+                </div>
+                <div class="name invalid-input --empty d-none">
+                  * This field is required.
+                </div>
             </div>
-              <div class="name valid-input d-none">
-                Looks good!
-              </div>
-              <div class="name invalid-input --wrong d-none">
-                Please provide a valid name.
-              </div>
-              <div class="name invalid-input --empty d-none">
-                This field is required.
-              </div>
 
             <div class="form-group">
-              <label for="inputEmail">Correo Electrónico</label>
+              <label for="inputEmail">Correo Electrónico *</label>
               <input type="email" class="form-control" id="inputEmail" placeholder="ex. yourname@youremail.com">
-            </div>
-            <div class="email valid-input d-none">
-              Looks good!
-            </div>
-            <div class="email invalid-input --wrong d-none">
-              Please provide a valid e-mail.
-            </div>
-            <div class="email invalid-input --empty d-none">
-              This field is required.
+              <!-- Input feedback -->
+                <div class="email valid-input d-none">
+                  Looks good!
+                </div>
+                <div class="email invalid-input --wrong d-none">
+                  * Please provide a valid e-mail.
+                </div>
+                <div class="email invalid-input --empty d-none">
+                  * This field is required.
+                </div>
             </div>
 
             <div class="form-group">
