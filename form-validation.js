@@ -15,24 +15,27 @@ contactForm.addEventListener('submit', function (e) {
     
     // Name
     let nameValue = contactName.val();
-    let nameValidation = email.test(nameValue);
+    let nameValidation = lettersAndSpaces.test(nameValue);
+    let validNameInput = $(".name.valid-input");
     let emptyNameInput = $(".name.invalid-input.--empty");
-    let wrongNameInput = $(".name.wrong-input.--empty");
+    let wrongNameInput = $(".name.invalid-input.--wrong");
     // If it's empty
     if (nameValue.length == 0) {
         emptyNameInput.removeClass("d-none");
         contactName.addClass("is-invalid");
     // If it's wrong
-    }  else if (!emailValidation) {
+    }  else if (!nameValidation) {
         wrongNameInput.removeClass("d-none");
+        emptyNameInput.addClass("d-none");
         contactName.addClass("is-invalid");
     } 
     // If it's OK
     else {
+        contactName.removeClass("is-invalid");
         emptyNameInput.addClass("d-none");
         wrongNameInput.addClass("d-none");
-        contactName.removeClass("is-invalid");
         contactName.addClass("is-valid");
+        validNameInput.removeClass("d-none");
     }
 
     // Email
@@ -46,13 +49,11 @@ contactForm.addEventListener('submit', function (e) {
     if (emailValue.length == 0) {
         emptyEmailInput.removeClass("d-none");
         contactEmail.addClass("is-invalid");
-        console.log("donde estoy")
     // If it's wrong
     }  else if (!emailValidation) {
         wrongEmailInput.removeClass("d-none");
         emptyEmailInput.addClass("d-none");
         contactEmail.addClass("is-invalid");
-        console.log("aqui?")
     } 
     // If it's OK
     else {
