@@ -11,7 +11,7 @@ contactForm.addEventListener('submit', function (e) {
     // RegExp
     const lettersAndSpaces = /^[A-Za-z\s]*$/;
     const email = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    const numbersAndSpaces = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+    const numbersAndSpaces = /(\s*[0-9]+)+/;
     
     // Name
     let nameValue = contactName.val();
@@ -23,6 +23,7 @@ contactForm.addEventListener('submit', function (e) {
     if (nameValue.length == 0) {
         emptyNameInput.removeClass("d-none");
         contactName.addClass("is-invalid");
+        wrongNameInput.addClass("is-invalid");
     // If it's wrong
     }  else if (!nameValidation) {
         wrongNameInput.removeClass("d-none");
@@ -49,6 +50,7 @@ contactForm.addEventListener('submit', function (e) {
     if (emailValue.length == 0) {
         emptyEmailInput.removeClass("d-none");
         contactEmail.addClass("is-invalid");
+        wrongEmailInput.addClass("d-none");
     // If it's wrong
     }  else if (!emailValidation) {
         wrongEmailInput.removeClass("d-none");
@@ -65,11 +67,30 @@ contactForm.addEventListener('submit', function (e) {
     }
     
     // Number
-    let numberValidation = numbersAndSpaces.test(contactNumber.value);
-    if (!numberValidation) {
+    let numberValue = contactNumber.val();
+    let numberValidation = numbersAndSpaces.test(numberValue);
+    let emptyNumberInput = $(".number.invalid-input.--empty");
+    let wrongNumberInput = $(".number.invalid-input.--wrong");
+    let validNumberInput = $(".number.valid-input");
+
+    // If it's empty
+    if (numberValue.length == 0) {
+        emptyNumberInput.removeClass("d-none");
+        wrongNumberInput.addClass("d-none");
         contactNumber.addClass("is-invalid");
+        console.log("donde estoy")
+    // If it's wrong
+    } else if (!numberValidation) {
+        wrongNumberInput.removeClass("d-none");
+        emptyNumberInput.addClass("d-none");
+        contactNumber.addClass("is-invalid");
+        console.log("aqui?")
+    // If it's OK
     } else {
         contactNumber.removeClass("is-invalid");
+        validNumberInput.removeClass("d-none")
+        emptyNumberInput.addClass("d-none");
+        wrongNumberInput.addClass("d-none");
         contactNumber.addClass("is-valid");
     }
 });

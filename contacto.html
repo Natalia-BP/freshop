@@ -96,8 +96,18 @@
             </div>
 
             <div class="form-group">
-              <label for="inputNumber">Número de teléfono</label>
+              <label for="inputNumber">Número de teléfono *</label>
               <input type="text" class="form-control" id="inputNumber" placeholder="ex. 2-222-22-2222">
+              <!-- Input feedback -->
+              <div class="number valid-input d-none">
+                Looks good!
+              </div>
+              <div class="number invalid-input --wrong d-none">
+                * Please provide a valid phone number.
+              </div>
+              <div class="number invalid-input --empty d-none">
+                * This field is required.
+              </div>
             </div>
 
             <div class="form-group">
