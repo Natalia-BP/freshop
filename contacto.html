@@ -118,6 +118,16 @@
             <div class="form-group">
               <label for="inputTextArea">Mensaje</label>
               <textarea class="form-control" id="inputTextArea" rows="3" placeholder="Tu Mensaje"></textarea>
+              <!-- Input feedback -->
+              <div class="message valid-input d-none">
+                Looks good!
+              </div>
+              <div class="message invalid-input --wrong d-none">
+                * Please provide a valid phone number.
+              </div>
+              <div class="message invalid-input --empty d-none">
+                * This field is required.
+              </div>
             </div>
             
             <div class="form-group d-flex justify-content-center justify-content-md-end mb-md-0">
