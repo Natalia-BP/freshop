@@ -115,12 +115,9 @@ if (contactForm) {
                     contactMessage.addClass("is-valid");
                 }
     
-                console.log(contactName.hasClass("is-valid"));
             // Form submission
             if (contactName.hasClass("is-valid") && contactEmail.hasClass("is-valid") && contactNumber.hasClass("is-valid") && contactMessage.hasClass("is-valid") ) {
-                console.log("estoy aqui?");   
                 contactForm.submit();
-                // window.location.href = "/thank-you.html";
             };
             });
 }
