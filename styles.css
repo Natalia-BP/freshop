@@ -200,7 +200,7 @@ footer h2, footer ul.social-media {
 }
 
 .footer-content i {
-    transition: color 0.6s;
+    transition: color 0.3s;
 }
 
 .footer-content i.fab:hover,

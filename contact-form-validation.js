@@ -1,4 +1,4 @@
-window.addEventListener("DOMContentLoaded", (event) => {
+window.addEventListener("DOMContentLoaded", () => {
 // Get form ID
 let contactForm = document.getElementById('pdrio-contact-main__form');
 
