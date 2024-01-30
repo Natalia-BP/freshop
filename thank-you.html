@@ -101,20 +101,22 @@
       <h2>Newsletter</h2>
       <hr />
       <div class="footer-content">
-        <form action="https://formspree.io/f/mnqlvzak" method="POST">
+        <form id="pdrio-contact-main__newsletter-form" action="https://formspree.io/f/mnqlvzak" method="POST" novalidate>
           <div class="input-group input-group-sm mb-3">
-            <input type="email" name="_replyto" class="form-control" aria-label="Email input for newsletter"
-              aria-describedby="inputGroup-sizing-sm" required>
+            <input id="inputNewsletter" type="email" name="Email" class="form-control" aria-label="Email input for newsletter">
             <div class="input-group-append">
               <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-envelope"></i></span>
             </div>
-          </div>
 
-          <div class="form-row justify-content-center">
-            <button type="submit">Enviar</button>
+            <!-- Input feedback -->
+            <div class="newsletter valid-input d-none">
+              Looks good!
+            </div>
+            <div class="newsletter invalid-input --wrong d-none">
+              * Please provide a valid email.
+            </div>
           </div>
-        </form>
-      </div>
+          </div>
     </div>
 
     <!-- Redes Sociales -->
@@ -147,7 +149,7 @@
         crossorigin="anonymous"></script>
 
     <!-- My Script -->
-    <script src="./form-validation.js"></script>
+    <script src="./newsletter-form-validation.js"></script>
 </body>
 
 </html>

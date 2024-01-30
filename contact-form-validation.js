@@ -1,8 +1,9 @@
+// Wait for website to fully load
 window.addEventListener("DOMContentLoaded", () => {
 // Get form ID
 let contactForm = document.getElementById('pdrio-contact-main__form');
 
-// Validation
+// Perform validation only if contactForm is available
 if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();

@@ -172,9 +172,9 @@
       <h2>Newsletter</h2>
       <hr />
       <div class="footer-content">
-        <form action="https://formspree.io/f/mnqlvzak" method="POST">
+        <form id="pdrio-contact-main__newsletter-form" action="https://formspree.io/f/mnqlvzak" method="POST" novalidate>
           <div class="input-group input-group-sm mb-3">
-            <input type="email" name="Email" class="form-control" aria-label="Email input for newsletter" required>
+            <input id="inputNewsletter" type="email" name="Email" class="form-control" aria-label="Email input for newsletter">
             <div class="input-group-append">
               <span class="input-group-text" id="inputGroup-sizing-sm"><i class="fas fa-envelope"></i></span>
             </div>
@@ -225,8 +225,9 @@
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
 
-    <!-- My Script -->
+    <!-- My Scripts -->
     <script src="./contact-form-validation.js"></script>
+    <script src="./newsletter-form-validation.js"></script>
 </body>
 
 </html>
