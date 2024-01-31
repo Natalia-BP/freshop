@@ -30,7 +30,6 @@ if (contactForm) {
                     emptyNameInput.removeClass("d-none");
                     wrongNameInput.addClass("d-none");
                     contactName.addClass("is-invalid");
-                    wrongNameInput.addClass("is-invalid");
                 // If it's wrong
                 }  else if (!nameValidation) {
                     wrongNameInput.removeClass("d-none");
@@ -56,8 +55,8 @@ if (contactForm) {
                 // If it's empty
                 if (emailValue.length == 0) {
                     emptyEmailInput.removeClass("d-none");
-                    contactEmail.addClass("is-invalid");
                     wrongEmailInput.addClass("d-none");
+                    contactEmail.addClass("is-invalid");
                 // If it's wrong
                 }  else if (!emailValidation) {
                     wrongEmailInput.removeClass("d-none");
